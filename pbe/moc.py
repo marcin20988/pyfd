@@ -36,14 +36,21 @@ class MOCSolution:
                 # Death coalescence term
                 for j in arange(self.number_of_classes):
                     dNdt[i] -= N[i] * N[j] * self.Q(self.xi[i], self.xi[j])
+
+        if self.theta is not None:
+            dNdt -= (N - self.N0) / self.theta
         return dNdt
 
-    def __init__(self, N0, t, xi0, beta=None, gamma=None, Q=None):
+    def __init__(self, N0, t, xi0, beta=None, gamma=None, Q=None, theta=None):
         self.number_of_classes = N0.shape[0]
         # Kernels setup
         self.beta = beta  # Daughter particle distribution
         self.gamma = gamma  # Breakup frequency
         self.Q = Q  #
+        # inflow and outflow replaced with relaxation to equilibrium
+        # process with relaxation time equal to residence time theta
+        self.theta = theta
+        self.N0 = N0
         # Uniform grid
         self.xi = xi0 + xi0 * arange(self.number_of_classes)
         self.delta_xi = xi0
