@@ -1,4 +1,5 @@
 import numpy as np
+from numpy import arange, sum, exp, linspace, sqrt, pi, zeros
 
 
 class fluid:
@@ -27,10 +28,20 @@ class fluid:
             # mean flow to travel length equal to three time
             # the orifice thickness
             # orifice thickness is 5mm
-            self.thetas = 3.0 * 0.005 / self.U[:]
+            self.thetas = 4.0 * 0.005 / self.U[:]
             self.epsilons = 1.0 / self.rhoc * self.dpMax[:] * self.U[:]\
                 / 2.0 / self.D * (1.0 / self.beta ** 2 - 1.0)
             self.epsilon = self.epsilons[caseNr]
             self.theta = self.thetas[caseNr]
         else:
             sys.exit("Valid cases are: 'galinat'")
+
+        # default values from Coulaloglou and Tavlarides
+        self.C1 = 0.4
+        self.C2 = 0.08
+
+    def gamma(self, xi):
+        C = self.C1 * xi ** (-2.0 / 9.0) * self.epsilon ** (1.0 / 3.0)
+        exp_argument = - self.C2 * self.sigma * (1.0 + self.alpha) ** 2\
+            / (self.rhod * xi ** (5.0 / 9.0) * self.epsilon ** (2.0 / 3.0))
+        return C * exp(exp_argument)

@@ -23,7 +23,7 @@ class MOCSolution:
             # Birth breakup term
             for i in arange(self.number_of_classes):
                 for j in arange(i + 1, self.number_of_classes):
-                    dNdt[i] = \
+                    dNdt[i] += \
                         self.beta(self.xi[i], self.xi[j]) \
                         * self.gamma(self.xi[j]) \
                         * N[j] * self.delta_xi
