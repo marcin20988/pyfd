@@ -17,6 +17,7 @@ class fluid:
             self.sigma = 4.7e-02
             self.dpMax = np.array([173.0, 363.0, 566.0, 706.0, 871.0, 1120.0])
             self.U = np.array([0.118, 0.177, 0.236, 0.275, 0.314, 0.354])
+            self.Re = np.array([4250, 6400, 8600, 10000, 11500, 12900])
             # orifice ratio
             self.beta_or = 0.5
             # volume fraction
