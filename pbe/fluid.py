@@ -46,8 +46,8 @@ class fluid:
             # pipe diameter, length and volume
             self.D = 0.063
             self.L = 4.5
-            self.V = pi * (self.D / 2.0) ** 2 * L
-            self.epsilon = 0.0571
+            self.V = pi * (self.D / 2.0) ** 2 * self.L
+            self.epsilon = 0.0823
             self.theta = None
         else:
             sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi'")
@@ -69,15 +69,16 @@ class fluid:
         return 2.0 * 2.4 / xi1 * exp(- 4.5 * (2.0 * xi2 - xi1) ** 2 / xi1 ** 2)
 
     # coalescence rate:
-    def Q(xi1, xi2):
+    def Q(self, xi1, xi2):
         dRatio = xi1 ** (1.0 / 3.0) * xi2 ** (1.0 / 3.0)\
             / (xi1 ** (1.0 / 3.0) + xi2 ** (1.0 / 3.0))
         dRatio = dRatio ** 4
 
         exp_argument = - self.C4 * self.muc * self.rhoc * self.epsilon\
-            / (1.0 + self.alpha) ** 3 * dRatio / sigma ** 2
+            / (1.0 + self.alpha) ** 3 * dRatio / self.sigma ** 2
 
         C = self.C3 * (xi1 ** (1.0 / 3.0) + xi2 ** (1.0 / 3.0)) ** 2\
             * (xi1 ** (2.0 / 9.0) + xi2 ** (2.0 / 9.0)) ** 0.5\
-            * epsilon ** (1.0 / 3.0) / (1.0 + self.alpha) / self.V
+            * self.epsilon ** (1.0 / 3.0) / (1.0 + self.alpha) / self.V
         return exp(exp_argument) * C
+        #return exp_argument
