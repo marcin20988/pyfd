@@ -25,7 +25,7 @@ for c in cases:
     s0 = v0 / 8.0
     # this is a breakup dominated case so we don't need large diameters
     vmax = 1.5 * v0
-    g = 120
+    g = 160
 
     dv = vmax / g
     v = dv + dv * arange(g)
