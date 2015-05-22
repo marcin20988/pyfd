@@ -34,8 +34,23 @@ class fluid:
                 / 2.0 / self.D * (1.0 / self.beta_or ** 2 - 1.0)
             self.epsilon = self.epsilons[caseNr]
             self.theta = self.thetas[caseNr]
+        elif name is "simmonsAzzopardi":
+            self.rhoc = 683.7
+            self.rhod = 1166.0
+            self.mud = 4.5e-04
+            self.muc = 1.6e-03
+            self.sigma = 4.7e-02
+            self.U = 2.71
+            # volume fraction
+            self.alpha = 0.117
+            # pipe diameter, length and volume
+            self.D = 0.063
+            self.L = 4.5
+            self.V = pi * (self.D / 2.0) ** 2 * L
+            self.epsilon = 0.0571
+            self.theta = None
         else:
-            sys.exit("Valid cases are: 'galinat'")
+            sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi'")
 
         # default values from Coulaloglou and Tavlarides
         self.C1 = 0.4
@@ -62,7 +77,7 @@ class fluid:
         exp_argument = - self.C4 * self.muc * self.rhoc * self.epsilon\
             / (1.0 + self.alpha) ** 3 * dRatio / sigma ** 2
 
-        C = self.C3 * (xi1 ** (2.0 / 3.0) + xi2 ** (2.0 / 3.0))\
+        C = self.C3 * (xi1 ** (1.0 / 3.0) + xi2 ** (1.0 / 3.0)) ** 2\
             * (xi1 ** (2.0 / 9.0) + xi2 ** (2.0 / 9.0)) ** 0.5\
-            * epsilon ** (1.0 / 3.0) / (1.0 + self.alpha)
+            * epsilon ** (1.0 / 3.0) / (1.0 + self.alpha) / self.V
         return exp(exp_argument) * C
