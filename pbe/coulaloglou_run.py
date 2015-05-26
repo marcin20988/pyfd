@@ -8,23 +8,24 @@ import numpy as np
 
 pbe_solutions = dict()
 
-F = fluid('simmonsAzzopardi')
+F = fluid('coulaloglou', 1, 3)
 F.C1 = F.C1 * 1.0
 F.C2 = F.C2 * 1.0
-F.C3 = F.C3 * 1.0e07
-F.C4 = F.C4 * 1.0e05
+F.C3 = F.C3 * 1.0  # e07
+F.C4 = F.C4 * 1.0e07
 
-t = arange(0.0, 1.0, 1e-02)
+# 20 times residence time should be enough to get convergence
+t = arange(0.0, 0.5, 1e-01)
 # data structure: each row contains pair of values Re, d32
 # cases are aranged with increasing Re
-d0 = 500e-06
+d0 = 0.5e-03
 # convert diameter to volume
 v0 = pi / 6.0 * d0 ** 3
 # standard deviation
 s0 = v0 / 4.0
-# experimentally measured diameters are between 200-1000 microns
-vmax = 8 * v0
-g = 180
+# this is a breakup dominated case so we don't need large diameters
+vmax = 3 * v0
+g = 80
 
 dv = vmax / g
 v = dv + dv * arange(g)
@@ -32,9 +33,9 @@ Ninit = F.alpha / v0 / s0 / sqrt(2.0 * pi)\
     * exp(- (v - v0) ** 2 / 2 / s0 ** 2)
 pbe_solutions[0] = MOCSolution(
     Ninit, t, dv,
-    #Q=F.Q,
-    gamma=F.gamma,
-    beta=F.beta,
+    Q=F.Q,
+    #gamma=F.gamma,
+    #beta=F.beta,
     pdf='density'
 )
 
@@ -95,6 +96,7 @@ ax.plot(
     marker=next(markers),
     label="breakup frequency".format(n))
 ax.legend(loc="best")
+#ax.set_xlim(0, 0.6)
 ax.set_yscale('log')
 
 plt.show()

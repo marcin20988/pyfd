@@ -1,5 +1,6 @@
 import numpy as np
 from numpy import arange, sum, exp, linspace, sqrt, pi, zeros
+import sys
 
 
 class fluid:
@@ -8,7 +9,7 @@ class fluid:
 
     """
 
-    def __init__(self, name, caseNr=0):
+    def __init__(self, name, caseNr=0, caseNr2=0):
         if name is "galinat":
             self.rhoc = 996.0
             self.rhod = 683.7
@@ -51,8 +52,28 @@ class fluid:
             self.V = pi * (self.D / 2.0) ** 2 * self.L
             self.epsilon = 0.082
             self.theta = None
+        elif name is "coulaloglou":
+            self.rhoc = 1000.0
+            self.muc = 1.0e-03
+            self.rhod = 972.0
+            self.mud = 1.3e-03
+            self.sigma = 42.82e-03
+            # volume fraction
+            self.alphas = np.array([0.05, 0.1, 0.15])
+            self.alpha = self.alphas[caseNr]
+            # impeller speed: (in 1 / min)
+            self.Nstars = np.array([190.0, 220.0, 250.0, 280.0, 310.0])
+            # convert to 1 / second:
+            self.Nstar = self.Nstars[caseNr2] / 60.0
+            # impeller diameter: (10cm)
+            self.Dstar = 0.1
+            # tank volume (12l)
+            self.V = 12.0e-03
+            self.epsilon = 0.407 * self.Nstar ** 3 * self.Dstar ** 2
+            # residence time is 10 minutes
+            self.theta = 10.0 * 60.0
         else:
-            sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi'")
+            sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi', 'coulaloglou'")
 
         # default values from Coulaloglou and Tavlarides
         self.C1 = 0.4
@@ -84,4 +105,3 @@ class fluid:
             * (xi1 ** (2.0 / 9.0) + xi2 ** (2.0 / 9.0)) ** 0.5\
             * self.epsilon ** (1.0 / 3.0) / (1.0 + self.alpha) / self.V
         return exp(exp_argument) * C
-        #return exp_argument
