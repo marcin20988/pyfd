@@ -21,25 +21,27 @@ class fluid:
             # orifice ratio
             self.beta_or = 0.5
             # volume fraction
-            self.alpha = 0.01
-            # pipe diameter
+            self.alpha = 0.02
+            # pipe diameter, and length
             self.D = 0.03
+            self.L = 1.0
             # residence time; this is a though one...
             # we'll take it equal to the time needed for the
             # mean flow to travel length equal to three time
             # the orifice thickness
             # orifice thickness is 5mm
-            self.thetas = 4.0 * 0.005 / self.U[:]
+            self.thetas = 2.0 * 0.005 / self.U[:]
             self.epsilons = 1.0 / self.rhoc * self.dpMax[:] * self.U[:]\
                 / 2.0 / self.D * (1.0 / self.beta_or ** 2 - 1.0)
             self.epsilon = self.epsilons[caseNr]
             self.theta = self.thetas[caseNr]
+            self.V = pi * (self.D / 2.0) ** 2 * self.L
         elif name is "simmonsAzzopardi":
-            self.rhoc = 683.7
+            self.rhoc = 797.0
+            self.muc = 1.8e-03
             self.rhod = 1166.0
-            self.mud = 4.5e-04
-            self.muc = 1.6e-03
-            self.sigma = 4.7e-02
+            self.mud = 1.6e-03
+            self.sigma = 1.0e-02
             self.U = 2.71
             # volume fraction
             self.alpha = 0.117
@@ -47,7 +49,7 @@ class fluid:
             self.D = 0.063
             self.L = 4.5
             self.V = pi * (self.D / 2.0) ** 2 * self.L
-            self.epsilon = 0.0823
+            self.epsilon = 0.082
             self.theta = None
         else:
             sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi'")
@@ -59,8 +61,9 @@ class fluid:
         self.C4 = 1.83e09
 
     def gamma(self, xi):
-        C = self.C1 * xi ** (-2.0 / 9.0) * self.epsilon ** (1.0 / 3.0)
-        exp_argument = - self.C2 * self.sigma * (1.0 + self.alpha) ** 2\
+        C = self.C1 * xi ** (-2.0 / 9.0) * self.epsilon ** (1.0 / 3.0)\
+            / (1.0 + self.alpha)
+        exp_argument = - self.C2 * self.sigma * (1.0 + self.alpha) ** 2 \
             / (self.rhod * xi ** (5.0 / 9.0) * self.epsilon ** (2.0 / 3.0))
         return C * exp(exp_argument)
 
