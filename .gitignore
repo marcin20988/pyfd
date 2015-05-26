@@ -1,5 +1,5 @@
 *.pyc
 *.swp
 *.swo
-validationData/orifice/results/histograms/*.pdf
-validationData/orifice/results/*.pdf
+pbe/validationData/orifice/results/histograms/*
+pbe/validationData/orifice/results/*.pdf
