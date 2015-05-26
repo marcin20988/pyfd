@@ -10,11 +10,15 @@ pbe_solutions = dict()
 cases = arange(5)
 for c in cases:
     F = fluid('galinat', c)
-    F.C1 = F.C1 * 3.0
-    F.C2 = F.C2 * 35.0
+    # expression for epsilon proposed by Galinat et al seems to be
+    # with correct order of magnitude, however I find it about
+    # twice as big as it should be (comparing to 3D CFD)
+    F.epsilon /= 2.0
+    F.C1 = F.C1 * 1.0
+    F.C2 = F.C2 * 9.0
 
     # 20 times residence time should be enough to get convergence
-    t = arange(0.0, 20.0 * F.theta, 1e-03)
+    t = arange(0.0, 10.0 * F.theta, 1e-03)
     # data structure: each row contains pair of values Re, d32
     # cases are aranged with increasing Re
     d0s = genfromtxt('validationData/orifice/d32_upstream.txt', delimiter=',')
@@ -24,8 +28,8 @@ for c in cases:
     # standard deviation
     s0 = v0 / 8.0
     # this is a breakup dominated case so we don't need large diameters
-    vmax = 1.5 * v0
-    g = 160
+    vmax = 1.4 * v0
+    g = 80
 
     dv = vmax / g
     v = dv + dv * arange(g)
@@ -36,7 +40,7 @@ for c in cases:
         gamma=F.gamma,
         beta=F.beta,
         theta=F.theta,
-        pdf='density'
+        pdf='number'
     )
 
 m1_init = sum(Ninit[:] * v[:])
@@ -101,5 +105,18 @@ ax.plot(F.Re[0:-1], y, '+', marker='+', label="Galinat et al")
 ax.plot(F.Re[0:dRe.shape[0]], dRe * 1e03, '+', marker='o',
         label='PBE')
 ax.grid()
+plt.savefig('validationData/orifice/results/dRe.pdf')
+
+fig = plt.figure()
+ax = fig.gca()
+ax.plot(
+    d, F.gamma(v), "+",
+    marker=next(markers),
+    label="breakup frequency".format(n))
+ax.legend(loc="best")
+ax.set_yscale('log')
+plt.savefig('validationData/orifice/results/breakup.pdf')
+
+plt.show()
 
 plt.show()
