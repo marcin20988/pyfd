@@ -12,10 +12,11 @@ F = fluid('coulaloglou', 1, 3)
 F.C1 = F.C1 * 1.0
 F.C2 = F.C2 * 1.0
 F.C3 = F.C3 * 1.0  # e07
-F.C4 = F.C4 * 1.0e07
+F.C4 = F.C4 * 1.0
+print F.V
 
 # 20 times residence time should be enough to get convergence
-t = arange(0.0, 0.5, 1e-01)
+t = arange(0.0, 10, 1e-01)
 # data structure: each row contains pair of values Re, d32
 # cases are aranged with increasing Re
 d0 = 0.5e-03
@@ -25,18 +26,20 @@ v0 = pi / 6.0 * d0 ** 3
 s0 = v0 / 4.0
 # this is a breakup dominated case so we don't need large diameters
 vmax = 3 * v0
-g = 80
+g = 40
 
 dv = vmax / g
 v = dv + dv * arange(g)
-Ninit = F.alpha / v0 / s0 / sqrt(2.0 * pi)\
+Ninit = F.alpha / v0 * F.V\
+    * 1.0 / s0 / sqrt(2.0 * pi)\
     * exp(- (v - v0) ** 2 / 2 / s0 ** 2)
+
 pbe_solutions[0] = MOCSolution(
     Ninit, t, dv,
-    Q=F.Q,
+    #Q=F.Q,
     #gamma=F.gamma,
     #beta=F.beta,
-    pdf='density'
+    pdf='number'
 )
 
 m1_init = sum(Ninit[:] * v[:])
@@ -79,10 +82,12 @@ ax.plot(
 ax.legend(loc='best')
 
 coalescence = zeros(v.shape[0])
-breakup = F.gamma(v)
+#breakup = F.gamma(pbe_solutions[0].xi) * pbe_solutions[0].N[-1]
+breakup = F.gamma(pbe_solutions[0].xi)
+N = pbe_solutions[0].N[-1]
 for i in arange(v.shape[0]):
     coalescence[i] =\
-        sum(F.Q(v[i], v) * pbe_solutions[0].delta_xi * pbe_solutions[0].xi)
+        sum(F.Q(pbe_solutions[0].xi[i], pbe_solutions[0].xi) * N)
 
 fig = plt.figure()
 ax = fig.gca()

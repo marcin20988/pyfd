@@ -76,10 +76,10 @@ class fluid:
             sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi', 'coulaloglou'")
 
         # default values from Coulaloglou and Tavlarides
-        self.C1 = 0.4
+        self.C1 = 0.00487
         self.C2 = 0.08
-        self.C3 = 2.8e-06
-        self.C4 = 1.83e09
+        self.C3 = 2.17e-16
+        self.C4 = 2.28e13
 
     def gamma(self, xi):
         C = self.C1 * xi ** (-2.0 / 9.0) * self.epsilon ** (1.0 / 3.0)\

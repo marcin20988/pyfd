@@ -11,8 +11,9 @@ pbe_solutions = dict()
 F = fluid('simmonsAzzopardi')
 F.C1 = F.C1 * 1.0
 F.C2 = F.C2 * 1.0
-F.C3 = F.C3 * 1.0e07
-F.C4 = F.C4 * 1.0e05
+F.C3 = F.C3 * 1.0
+F.C4 = F.C4 * 1.0
+print F.V
 
 t = arange(0.0, 1.0, 1e-02)
 # data structure: each row contains pair of values Re, d32
@@ -28,14 +29,15 @@ g = 180
 
 dv = vmax / g
 v = dv + dv * arange(g)
-Ninit = F.alpha / v0 / s0 / sqrt(2.0 * pi)\
+Ninit = F.alpha / v0 * F.V / (max(v) - min(v))\
+    * 1.0 / s0 / sqrt(2.0 * pi)\
     * exp(- (v - v0) ** 2 / 2 / s0 ** 2)
 pbe_solutions[0] = MOCSolution(
     Ninit, t, dv,
     #Q=F.Q,
-    gamma=F.gamma,
-    beta=F.beta,
-    pdf='density'
+    #gamma=F.gamma,
+    #beta=F.beta,
+    pdf='number'
 )
 
 m1_init = sum(Ninit[:] * v[:])
@@ -77,11 +79,18 @@ ax.plot(
     label="Ninit".format(n))
 ax.legend(loc='best')
 
+
+#breakup = F.gamma(v)
+#for i in arange(v.shape[0]):
+    #coalescence[i] =\
+        #sum(F.Q(v[i], v) * pbe_solutions[0].delta_xi * pbe_solutions[0].xi)
+
 coalescence = zeros(v.shape[0])
-breakup = F.gamma(v)
+breakup = F.gamma(pbe_solutions[0].xi)
+N = pbe_solutions[0].N[-1]
 for i in arange(v.shape[0]):
     coalescence[i] =\
-        sum(F.Q(v[i], v) * pbe_solutions[0].delta_xi * pbe_solutions[0].xi)
+        sum(F.Q(pbe_solutions[0].xi[i], pbe_solutions[0].xi) * N)
 
 fig = plt.figure()
 ax = fig.gca()

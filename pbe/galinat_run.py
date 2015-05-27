@@ -13,9 +13,12 @@ for c in cases:
     # expression for epsilon proposed by Galinat et al seems to be
     # with correct order of magnitude, however I find it about
     # twice as big as it should be (comparing to 3D CFD)
-    F.epsilon /= 2.0
+    #F.epsilon /= 2.0
     F.C1 = F.C1 * 1.0
-    F.C2 = F.C2 * 9.0
+    F.C2 = F.C2 * 1.0
+    F.C3 = F.C3 * 1.0
+    F.C4 = F.C4 * 1.0
+    print F.V
 
     # 20 times residence time should be enough to get convergence
     t = arange(0.0, 10.0 * F.theta, 1e-03)
@@ -33,7 +36,8 @@ for c in cases:
 
     dv = vmax / g
     v = dv + dv * arange(g)
-    Ninit = 1.0 / s0 / sqrt(2.0 * pi)\
+    Ninit = F.alpha / v0 * F.V\
+        * 1.0 / s0 / sqrt(2.0 * pi)\
         * exp(- (v - v0) ** 2 / 2 / s0 ** 2)
     pbe_solutions[c] = MOCSolution(
         Ninit, t, dv,
