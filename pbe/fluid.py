@@ -10,7 +10,7 @@ class fluid:
     """
 
     def __init__(self, name, caseNr=0, caseNr2=0):
-        if name is "galinat":
+        if name == "galinat":
             self.rhoc = 996.0
             self.rhod = 683.7
             self.mud = 4.5e-04
@@ -18,7 +18,8 @@ class fluid:
             self.sigma = 4.7e-02
             self.dpMax = np.array([173.0, 363.0, 566.0, 706.0, 871.0, 1120.0])
             self.U = np.array([0.118, 0.177, 0.236, 0.275, 0.314, 0.354])
-            self.Re = np.array([4250, 6400, 8600, 10000, 11500, 12900])
+            self.Res = np.array([4250, 6400, 8600, 10000, 11500, 12900])
+            self.Re = self.Res[caseNr]
             # orifice ratio
             self.beta_or = 0.5
             # volume fraction
@@ -37,7 +38,19 @@ class fluid:
             self.epsilon = self.epsilons[caseNr]
             self.theta = self.thetas[caseNr]
             self.V = pi * (self.D / 2.0) ** 2 * self.L
-        elif name is "simmonsAzzopardi":
+            self.timeRange = arange(0.0, 10.0 * self.theta, 1e-02)
+            self.d0s = np.genfromtxt('validationData/orifice/d32_upstream.txt',
+                                     delimiter=',')
+            self.d0 = self.d0s[caseNr][1] * 1e-03
+            exp_dRe =\
+                np.genfromtxt('validationData/orifice/d32_downstream.txt',
+                              delimiter=',')
+            self.expectedD = exp_dRe.T[1][caseNr] * 1e-03
+            self.v0 = pi / 6.0 * self.d0 ** 3
+            self.s0 = self.v0 / 8.0
+            self.vMax = self.v0 * 1.5
+            self.numberOfClasses = 60
+        elif name == "simmonsAzzopardi":
             self.rhoc = 797.0
             self.muc = 1.8e-03
             self.rhod = 1166.0
@@ -52,7 +65,8 @@ class fluid:
             self.V = pi * (self.D / 2.0) ** 2 * self.L
             self.epsilon = 0.082
             self.theta = None
-        elif name is "coulaloglou":
+            self.Re = 78200.0
+        elif name == "coulaloglou":
             self.rhoc = 1000.0
             self.muc = 1.0e-03
             self.rhod = 972.0
@@ -72,11 +86,19 @@ class fluid:
             self.epsilon = 0.407 * self.Nstar ** 3 * self.Dstar ** 2
             # residence time is 10 minutes
             self.theta = 10.0 * 60.0
+            self.Re = self.Nstar * self.Dstar ** 2 / self.muc * self.rhoc
+            self.timeRange = arange(0.0, 60.0, 1e-01)
+            self.d0 = 0.35e-03
+            self.expectedD = 0.255e-03
+            self.v0 = pi / 6.0 * self.d0 ** 3
+            self.s0 = self.v0 / 3.0
+            self.vMax = self.v0 * 3.0
+            self.numberOfClasses = 60
         else:
             sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi', 'coulaloglou'")
 
         # default values from Coulaloglou and Tavlarides
-        self.C1 = 0.00487
+        self.C1 = 0.04
         self.C2 = 0.08
         self.C3 = 2.17e-16
         self.C4 = 2.28e13
@@ -84,8 +106,11 @@ class fluid:
     def gamma(self, xi):
         C = self.C1 * xi ** (-2.0 / 9.0) * self.epsilon ** (1.0 / 3.0)\
             / (1.0 + self.alpha)
+            #* self.Re / (1.0 + self.alpha)
+
         exp_argument = - self.C2 * self.sigma * (1.0 + self.alpha) ** 2 \
             / (self.rhod * xi ** (5.0 / 9.0) * self.epsilon ** (2.0 / 3.0))
+            #/ self.Re
         return C * exp(exp_argument)
 
     # droplet daughter distribution:
