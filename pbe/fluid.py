@@ -79,13 +79,17 @@ class fluid:
             self.rhod = 972.0
             self.mud = 1.3e-03
             self.sigma = 42.82e-03
-            # volume fraction
             self.alphas = np.array([0.05, 0.1, 0.15])
             self.alpha = self.alphas[caseNr]
+            exp_dRe =\
+                np.genfromtxt('validationData/coulaloglou/d32_N_alpha'
+                              + repr((caseNr + 1) * 5) + '.txt')
+            self.expectedD = exp_dRe.T[1][caseNr2] * 1e-03
+            self.Nstar = exp_dRe.T[0][caseNr2]
             # impeller speed: (in 1 / min)
-            self.Nstars = np.array([190.0, 220.0, 250.0, 280.0, 310.0])
+            #self.Nstars = np.array([190.0, 220.0, 250.0, 280.0, 310.0])
             # convert to 1 / second:
-            self.Nstar = self.Nstars[caseNr2] / 60.0
+            #self.Nstar = self.Nstars[caseNr2] / 60.0
             # impeller diameter: (10cm)
             self.Dstar = 0.1
             # tank volume (12l)
@@ -96,7 +100,7 @@ class fluid:
             self.Re = self.Nstar * self.Dstar ** 2 / self.muc * self.rhoc
             self.timeRange = arange(0.0, 60.0, 1e-01)
             self.d0 = 0.35e-03
-            self.expectedD = 0.255e-03
+            #self.expectedD = 0.255e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 3.0
             self.vMax = self.v0 * 3.0
