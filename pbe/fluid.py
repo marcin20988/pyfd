@@ -49,7 +49,7 @@ class fluid:
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 8.0
             self.vMax = self.v0 * 1.5
-            self.numberOfClasses = 60
+            self.numberOfClasses = 80
         elif name == "simmonsAzzopardi":
             self.rhoc = 797.0
             self.muc = 1.8e-03
@@ -66,6 +66,13 @@ class fluid:
             self.epsilon = 0.082
             self.theta = None
             self.Re = 78200.0
+            self.timeRange = arange(0.0, 10.0, 1e-02)
+            self.d0 = 0.35e-03
+            self.expectedD = 0.32e-03
+            self.v0 = pi / 6.0 * self.d0 ** 3
+            self.s0 = self.v0 / 3.0
+            self.vMax = self.v0 * 3.0
+            self.numberOfClasses = 80
         elif name == "coulaloglou":
             self.rhoc = 1000.0
             self.muc = 1.0e-03
