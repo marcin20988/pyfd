@@ -15,8 +15,8 @@ def case_error(C):
 
     F.C1 = C[0]
     F.C2 = C[1]
-    #F.C3 = C[2]
-    #F.C4 = C[3]
+    F.C3 = C[2]
+    F.C4 = C[3]
 
     t = F.timeRange
     v0 = F.v0
@@ -32,14 +32,11 @@ def case_error(C):
 
     pbe_solutions[0] = MOCSolution(
         Ninit, t, dv,
-        #Q=F.Q,
+	Q=F.Q,
         gamma=F.gamma,
         beta=F.beta,
         pdf='number'
     )
-    fig = plt.figure()
-    ax = fig.gca()
-    markers = cycle(['o', 's', 'v', '*', '.', ','])
 
     N = pbe_solutions[0].N[-1]
     m1 = sum(N[:] * v[:])
@@ -55,8 +52,8 @@ def case_error(C):
 # just to get initial values for a case
 F = fluid('coulaloglou', 1, 3)
 #C0 = np.array([F.C1 / 900.0, F.C2 * 150000.0, F.C3 * 1e-05, F.C4 * 1.0])
-C0 = np.array([F.C1 * 1.0, F.C2 * 1.0])
-C = fmin(case_error, C0, full_output=True, maxiter=5)
+C0 = np.array([F.C1 * 1.0, F.C2 * 1.0, F.C3, F.C4])
+C = fmin(case_error, C0, full_output=True, maxiter=100)
 #C = case_error(C0)
 
 print C
