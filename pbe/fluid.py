@@ -48,8 +48,8 @@ class fluid:
             self.expectedD = exp_dRe.T[1][caseNr] * 1e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 8.0
-            self.vMax = self.v0 * 1.5
-            self.numberOfClasses = 80
+            self.vMax = self.v0 * 1.3
+            self.numberOfClasses = 120
         elif name == "simmonsAzzopardi":
             self.rhoc = 797.0
             self.muc = 1.8e-03
@@ -85,7 +85,7 @@ class fluid:
                 np.genfromtxt('validationData/coulaloglou/d32_N_alpha'
                               + repr((caseNr + 1) * 5) + '.txt')
             self.expectedD = exp_dRe.T[1][caseNr2] * 1e-03
-            self.Nstar = exp_dRe.T[0][caseNr2]
+            self.Nstar = exp_dRe.T[0][caseNr2] / 60.0
             # impeller speed: (in 1 / min)
             #self.Nstars = np.array([190.0, 220.0, 250.0, 280.0, 310.0])
             # convert to 1 / second:
