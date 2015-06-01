@@ -19,7 +19,6 @@ class fluid:
             self.dpMax = np.array([173.0, 363.0, 566.0, 706.0, 871.0, 1120.0])
             self.U = np.array([0.118, 0.177, 0.236, 0.275, 0.314, 0.354])
             self.Res = np.array([4250, 6400, 8600, 10000, 11500, 12900])
-            self.Re = self.Res[caseNr]
             # orifice ratio
             self.beta_or = 0.5
             # volume fraction
@@ -27,6 +26,7 @@ class fluid:
             # pipe diameter, and length
             self.D = 0.03
             self.L = 1.0
+            self.Re = self.Res[caseNr]
             # residence time; this is a though one...
             # we'll take it equal to the time needed for the
             # mean flow to travel length equal to three time
@@ -50,6 +50,10 @@ class fluid:
             self.s0 = self.v0 / 8.0
             self.vMax = self.v0 * 1.3
             self.numberOfClasses = 120
+            self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
+            self.St = 2.0 / 9.0 * (self.expectedD / self.D) ** 2 \
+                * self.Re * self.R
+            self.Ca = self.muc * self.U[caseNr] / self.sigma
         elif name == "simmonsAzzopardi":
             self.rhoc = 797.0
             self.muc = 1.8e-03
@@ -66,13 +70,17 @@ class fluid:
             self.epsilon = 0.082
             self.theta = None
             self.Re = 78200.0
-            self.timeRange = arange(0.0, 10.0, 1e-02)
-            self.d0 = 0.35e-03
+            self.timeRange = arange(0.0, 300.0, 1e-02)
+            self.d0 = 0.3e-03
             self.expectedD = 0.32e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 3.0
             self.vMax = self.v0 * 3.0
             self.numberOfClasses = 80
+            self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
+            self.St = 2.0 / 9.0 * (self.expectedD / self.D) ** 2 \
+                * self.Re * self.R
+            self.Ca = self.muc * self.U / self.sigma
         elif name == "coulaloglou":
             self.rhoc = 1000.0
             self.muc = 1.0e-03
@@ -105,6 +113,11 @@ class fluid:
             self.s0 = self.v0 / 3.0
             self.vMax = self.v0 * 3.0
             self.numberOfClasses = 60
+            self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
+            self.St = 2.0 / 9.0 * (self.expectedD / self.Dstar) ** 2 \
+                * self.Re * self.R
+            self.Ca = self.mud * self.Nstar * self.Dstar / self.sigma \
+                * sqrt(self.rhoc / self.rhoc)
         else:
             sys.exit("Valid cases are: 'galinat', 'simmonsAzzopardi', 'coulaloglou'")
 
