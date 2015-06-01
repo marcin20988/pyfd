@@ -70,13 +70,13 @@ class fluid:
             self.epsilon = 0.082
             self.theta = None
             self.Re = 78200.0
-            self.timeRange = arange(0.0, 300.0, 1e-02)
-            self.d0 = 0.3e-03
+            self.timeRange = arange(0.0, 300.0, 1e-01)
+            self.d0 = 0.5e-03
             self.expectedD = 0.32e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 3.0
-            self.vMax = self.v0 * 3.0
-            self.numberOfClasses = 80
+            self.vMax = self.v0 * 8.0
+            self.numberOfClasses = 120
             self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
             self.St = 2.0 / 9.0 * (self.expectedD / self.D) ** 2 \
                 * self.Re * self.R
@@ -107,12 +107,12 @@ class fluid:
             self.theta = 10.0 * 60.0
             self.Re = self.Nstar * self.Dstar ** 2 / self.muc * self.rhoc
             self.timeRange = arange(0.0, 60.0, 1e-01)
-            self.d0 = 0.35e-03
+            self.d0 = 0.45e-03
             #self.expectedD = 0.255e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 3.0
-            self.vMax = self.v0 * 3.0
-            self.numberOfClasses = 60
+            self.vMax = self.v0 * 8.0
+            self.numberOfClasses = 120
             self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
             self.St = 2.0 / 9.0 * (self.expectedD / self.Dstar) ** 2 \
                 * self.Re * self.R
