@@ -17,47 +17,39 @@ class SteadyStateSolution:
     def RHS(
         self, N, t
     ):
+       #pdb.set_trace()
         dNdt = zeros(self.number_of_classes)
 
         if self.gamma is not None and self.beta is not None:
-            # Death breakup term
-            dNdt -= N * self.gamma(self.xi)
-            # Birth breakup term
             for i in arange(self.number_of_classes):
-                for j in arange(i + 1, self.number_of_classes):
-                    dNdt[i] += \
-                        self.beta(self.xi[i], self.xi[j]) \
-                        * self.gamma(self.xi[j]) \
-                        * N[j] * self.delta_xi
+                # Death breakup term
+                if i != 0:
+                    dNdt[i] -= N[i] * self.gamma(self.xi[i])
+                # Birth breakup term
+                if i != (self.number_of_classes - 1):
+                    for j in arange(i + 1, self.number_of_classes):
+                        dNdt[i] += \
+                            self.beta(self.xi[i], self.xi[j]) \
+                            * self.gamma(self.xi[j]) \
+                            * N[j] * self.delta_xi
 
         if self.Q is not None:
             for i in arange(self.number_of_classes):
                 # Birth coalescence term
-                for j in arange(1, i):
-                    dNdti = 0.5 * N[i - j] * N[j] \
-                        * self.Q(self.xi[j], self.xi[i - j])
-                    if self.pdf == "number":
-                        dNdt[i] += dNdti
-                    elif self.pdf == "density":
-                        dNdt[i] += dNdti * self.delta_xi
-                    else:
-                        sys.exit(
-                            "Available pdf types are 'density' and 'number'")
+                if i != 0:
+                    for j in arange(i):
+                        dNdt[i] += 0.5 * N[i - j - 1] * N[j] \
+                            * self.Q(self.xi[j], self.xi[i - j - 1])
                 # Death coalescence term
-                for j in arange(self.number_of_classes):
-                    dNdti = N[i] * N[j] * self.Q(self.xi[i], self.xi[j])
-                    if self.pdf == "number":
-                        dNdt[i] -= dNdti
-                    elif self.pdf == "density":
-                        dNdt[i] -= dNdti * self.delta_xi
-                    else:
-                        sys.exit(
-                            "Available pdf types are 'density' and 'number'")
+                if i != (self.number_of_classes - 1):
+                    for j in arange(self.number_of_classes):
+                        dNdt[i] -= N[i] * N[j] * self.Q(self.xi[i], self.xi[j])
 
         if self.theta is not None:
             dNdt -= (N - self.N0) / self.theta
-	self.rhs = dNdt
+        self.rhs = dNdt
         return dNdt
+
 
     def solve(self, N):
       rhs = self.RHS(N, 0.0)
