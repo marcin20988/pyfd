@@ -1,0 +1,923 @@
+--------------
+constants:  0.00292874399 0.0315027521 2.67585407e-14 1.71109913e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000355005645314 0.000400814
+mass conservations:  0.939559526506
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000385431814762 0.000400814
+mass conservations:  0.970499722727
+--------------
+constants:  0.0030751811895 0.0315027521 2.67585407e-14 1.71109913e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000354323188668 0.000400814
+mass conservations:  0.937796367193
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000383583252921 0.000400814
+mass conservations:  0.96870553225
+--------------
+constants:  0.00292874399 0.033077889705 2.67585407e-14 1.71109913e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000357445124627 0.000400814
+mass conservations:  0.946322116945
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000390961503219 0.000400814
+mass conservations:  0.97583812596
+--------------
+constants:  0.00292874399 0.0315027521 2.8096467735e-14 1.71109913e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000355523315768 0.000400814
+mass conservations:  0.938275947135
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000385574573396 0.000400814
+mass conservations:  0.969410530276
+--------------
+constants:  0.00292874399 0.0315027521 2.67585407e-14 1.7966540865e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000353384347247 0.000400814
+mass conservations:  0.943216351198
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000385047858321 0.000400814
+mass conservations:  0.973531357716
+--------------
+constants:  0.0027823067905 0.0322903209025 2.74275042175e-14 1.75387660825e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000356334967156 0.000400814
+mass conservations:  0.945898986114
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000389977681231 0.000400814
+mass conservations:  0.975799962202
+--------------
+constants:  0.00285552539025 0.0326841053038 2.77619859763e-14 1.64693291262e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00035892049784 0.000400814
+mass conservations:  0.941802104484
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000390921840271 0.000400814
+mass conservations:  0.972473261402
+--------------
+constants:  0.00281891609037 0.0332747819056 2.82637086144e-14 1.57207232569e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000361876537712 0.000400814
+mass conservations:  0.940548354116
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000393765731502 0.000400814
+mass conservations:  0.971742616439
+--------------
+constants:  0.00280061144044 0.0335701202066 2.85145699334e-14 1.66297446697e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000360300596726 0.000400814
+mass conservations:  0.94578109067
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00039448761047 0.000400814
+mass conservations:  0.975825631752
+--------------
+constants:  0.00273654516566 0.0346038042598 2.73856939977e-14 1.63891213545e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000361934952474 0.000400814
+mass conservations:  0.949560347769
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000398437612021 0.000400814
+mass conservations:  0.979019085195
+--------------
+constants:  0.00264044575348 0.0361543303398 2.7030307129e-14 1.60281863818e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000364616980508 0.000400814
+mass conservations:  0.953068294908
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000404015398084 0.000400814
+mass conservations:  0.982177400553
+--------------
+constants:  0.00281205184665 0.035748240176 2.78560589709e-14 1.52060567217e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000366022620176 0.000400814
+mass conservations:  0.94647254021
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401518641988 0.000400814
+mass conservations:  0.977329402943
+--------------
+constants:  0.00282692437472 0.0374771998127 2.80703363476e-14 1.40397020413e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000371210451285 0.000400814
+mass conservations:  0.944562692924
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000406649610281 0.000400814
+mass conservations:  0.977321423947
+--------------
+constants:  0.00261470483951 0.0371603264273 2.91809203122e-14 1.40981868748e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000371867713081 0.000400814
+mass conservations:  0.944625384651
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000408028032418 0.000400814
+mass conservations:  0.977803692015
+--------------
+constants:  0.00264988408861 0.0384631990362 2.77580662681e-14 1.33136546077e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000374866546252 0.000400814
+mass conservations:  0.943902143854
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000411119284486 0.000400814
+mass conservations:  0.978438506396
+--------------
+constants:  0.00254706343779 0.0413527459024 2.77561064141e-14 1.30191416959e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000378132692689 0.000400814
+mass conservations:  0.947224825132
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000418087298874 0.000400814
+mass conservations:  0.982724585079
+--------------
+constants:  0.00261502660093 0.0393332549032 2.78830069642e-14 1.36945370862e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00037430172065 0.000400814
+mass conservations:  0.947641753032
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000413109132549 0.000400814
+mass conservations:  0.981246443534
+--------------
+constants:  0.0027128241984 0.0400626597499 2.94158578171e-14 1.15448539232e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000384553412578 0.000400814
+mass conservations:  0.933799722656
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000415735879933 0.000400814
+mass conservations:  0.973861684071
+--------------
+constants:  0.00274901342086 0.042016824455 3.06086331611e-14 9.30318769385e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400918977218 0.000400814
+mass conservations:  0.917992420893
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000422775800825 0.000400814
+mass conservations:  0.966339830068
+--------------
+constants:  0.00280523676092 0.0382255199624 2.99259710804e-14 1.16828285227e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000382534307328 0.000400814
+mass conservations:  0.930206546285
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000410924843999 0.000400814
+mass conservations:  0.968993281568
+--------------
+constants:  0.0028480556094 0.0389767362926 3.11348641825e-14 1.12482979586e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000386058319794 0.000400814
+mass conservations:  0.927392027008
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000412955472536 0.000400814
+mass conservations:  0.96775748705
+--------------
+constants:  0.00299991024344 0.041187813834 3.06889820736e-14 9.03882123338e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401888946198 0.000400814
+mass conservations:  0.913035524284
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000420192292263 0.000400814
+mass conservations:  0.960415912879
+--------------
+constants:  0.00319251294541 0.0432015575374 3.14430129543e-14 6.50913841266e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000429719461067 0.000400814
+mass conservations:  0.889460615599
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000432548143049 0.000400814
+mass conservations:  0.942409722441
+--------------
+constants:  0.00287418364259 0.0427262474593 3.31088889012e-14 6.59686566298e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000430813836947 0.000400814
+mass conservations:  0.889870935114
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000433862707421 0.000400814
+mass conservations:  0.943717264157
+--------------
+constants:  0.00283873919169 0.0387894617244 2.9329974486e-14 1.21789929467e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000380168217721 0.000400814
+mass conservations:  0.935125577182
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000411290941676 0.000400814
+mass conservations:  0.972684087369
+--------------
+constants:  0.00286236882562 0.0414139855477 3.18492507628e-14 8.45757475755e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000408353702 0.000400814
+mass conservations:  0.907732102899
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000423422264496 0.000400814
+mass conservations:  0.957474993092
+--------------
+constants:  0.00285646141714 0.0407578545918 3.12194316936e-14 9.38792930484e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399596629933 0.000400814
+mass conservations:  0.915663616176
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000419715518925 0.000400814
+mass conservations:  0.962370964912
+--------------
+constants:  0.0029214835845 0.0432440946243 3.1899984475e-14 7.80628957268e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000415892425816 0.000400814
+mass conservations:  0.903891481856
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000428240027472 0.000400814
+mass conservations:  0.956882433997
+--------------
+constants:  0.00283429846681 0.0394801636279 3.0419474429e-14 1.07136937852e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00038910633488 0.000400814
+mass conservations:  0.925056244853
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000414782578634 0.000400814
+mass conservations:  0.967078890298
+--------------
+constants:  0.00287178616473 0.0427445919618 3.03333964961e-14 7.97351805001e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000412586550837 0.000400814
+mass conservations:  0.906392201745
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000426712774014 0.000400814
+mass conservations:  0.958552457963
+--------------
+constants:  0.00285398824823 0.0399187002099 3.09344972609e-14 1.04296029815e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000391491097983 0.000400814
+mass conservations:  0.923113519558
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000416059759209 0.000400814
+mass conservations:  0.966240735074
+--------------
+constants:  0.00289538819802 0.0424604329175 3.13062976656e-14 8.3660768216e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000409415036805 0.000400814
+mass conservations:  0.908816186339
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000425112630417 0.000400814
+mass conservations:  0.959737511051
+--------------
+constants:  0.00284957089962 0.0402252309503 3.06411802382e-14 1.01267895443e+14
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000393502228472 0.000400814
+mass conservations:  0.921514290709
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000417166745589 0.000400814
+mass conservations:  0.965678876429
+--------------
+constants:  0.0028734897423 0.0421751617057 3.06446163223e-14 8.49876090671e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000407501273342 0.000400814
+mass conservations:  0.91031619506
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000424218946859 0.000400814
+mass conservations:  0.960623267487
+--------------
+constants:  0.00285886362175 0.0404828155838 3.08620270263e-14 9.94689246277e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000395049843662 0.000400814
+mass conservations:  0.920253385473
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000417966278679 0.000400814
+mass conservations:  0.965128203953
+--------------
+constants:  0.00288255345198 0.0419974232821 3.10483567391e-14 8.71162580315e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000405808459492 0.000400814
+mass conservations:  0.911636355097
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000423367049834 0.000400814
+mass conservations:  0.961224096726
+--------------
+constants:  0.00285781653771 0.0406682790332 3.07429743634e-14 9.77299860899e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000396323611433 0.000400814
+mass conservations:  0.91923132648
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000418637807784 0.000400814
+mass conservations:  0.964730882355
+--------------
+constants:  0.00287273718783 0.0418325703732 3.07679836196e-14 8.80457595776e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040468967642 0.000400814
+mass conservations:  0.912526268065
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000422835594384 0.000400814
+mass conservations:  0.961707747466
+--------------
+constants:  0.00286233201327 0.0408202542812 3.08385161746e-14 9.66131333652e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000397298119988 0.000400814
+mass conservations:  0.918440502282
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000419132563517 0.000400814
+mass conservations:  0.964380235592
+--------------
+constants:  0.00287604200965 0.0417230945478 3.0934807188e-14 8.9226271753e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000403744405187 0.000400814
+mass conservations:  0.913271270074
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000422359873113 0.000400814
+mass conservations:  0.962038392232
+--------------
+constants:  0.00286237290569 0.0409319829119 3.07909325695e-14 9.56040575057e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000398085000476 0.000400814
+mass conservations:  0.917808220384
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000419538100726 0.000400814
+mass conservations:  0.964119439983
+--------------
+constants:  0.00304152486891 0.0398321283545 3.11602980945e-14 9.5210471188e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000397330391986 0.000400814
+mass conservations:  0.914077004567
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000416215677113 0.000400814
+mass conservations:  0.958689561027
+--------------
+constants:  0.00318778059293 0.0387397803042 3.14361305613e-14 9.62997683128e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000395353576484 0.000400814
+mass conservations:  0.911371643079
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000412555764158 0.000400814
+mass conservations:  0.953706521121
+--------------
+constants:  0.00309093056633 0.0399884615398 3.12292222744e-14 9.14725322351e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400236727042 0.000400814
+mass conservations:  0.910732600032
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00041706049355 0.000400814
+mass conservations:  0.956113464939
+--------------
+constants:  0.00320522984286 0.0395725651691 3.14245753243e-14 8.89022316701e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401762013749 0.000400814
+mass conservations:  0.906604868455
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000416078622874 0.000400814
+mass conservations:  0.951300237579
+--------------
+constants:  0.00326231814249 0.0391970240377 3.15936272568e-14 8.91306951769e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401183059693 0.000400814
+mass conservations:  0.905413305762
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000414831606458 0.000400814
+mass conservations:  0.949162659669
+--------------
+constants:  0.00346229076089 0.0383295446006 3.19949746004e-14 8.58940140124e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040266895366 0.000400814
+mass conservations:  0.89830568363
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000412460014672 0.000400814
+mass conservations:  0.93943643111
+--------------
+constants:  0.00335597106347 0.0375120584988 3.23485740162e-14 9.20994411881e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000397363393735 0.000400814
+mass conservations:  0.902150855829
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000409601574091 0.000400814
+mass conservations:  0.94187662599
+--------------
+constants:  0.00353400147349 0.0356741808312 3.31783699875e-14 9.29550556152e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000394451546435 0.000400814
+mass conservations:  0.894040021583
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040335931524 0.000400814
+mass conservations:  0.92776401084
+--------------
+constants:  0.00383818991795 0.0354001808607 3.27975935432e-14 8.81462417569e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00039632822582 0.000400814
+mass conservations:  0.885650215905
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401444509323 0.000400814
+mass conservations:  0.915246239889
+--------------
+constants:  0.00432905416835 0.0327213439951 3.3586674468e-14 8.52797161111e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000392529562375 0.000400814
+mass conservations:  0.860421083704
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000390371147471 0.000400814
+mass conservations:  0.869287114219
+--------------
+constants:  0.00383207540467 0.0357484554266 3.32616261665e-14 8.16490032145e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402676217057 0.000400814
+mass conservations:  0.880466170358
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000404981084457 0.000400814
+mass conservations:  0.910097772231
+--------------
+constants:  0.00412804893563 0.0330036156905 3.41917068245e-14 8.54199256294e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000394330745327 0.000400814
+mass conservations:  0.864739365628
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000393163898523 0.000400814
+mass conservations:  0.877921444807
+--------------
+constants:  0.00389734416244 0.0346458530601 3.34999239495e-14 8.62905021396e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000396952348923 0.000400814
+mass conservations:  0.878859910163
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399635620666 0.000400814
+mass conservations:  0.904139795666
+--------------
+constants:  0.00408851471838 0.0324047904887 3.43737822229e-14 8.86263873507e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000390994670469 0.000400814
+mass conservations:  0.864044713798
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00039038145657 0.000400814
+mass conservations:  0.875452166797
+--------------
+constants:  0.00361884675026 0.0368483560726 3.25896765061e-14 8.6577107347e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400255172386 0.000400814
+mass conservations:  0.892349546511
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000407579808786 0.000400814
+mass conservations:  0.928503187841
+--------------
+constants:  0.00405922664417 0.0356472418788 3.28960400951e-14 7.83763716138e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000404267436238 0.000400814
+mass conservations:  0.874728159719
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000404169465673 0.000400814
+mass conservations:  0.900861960928
+--------------
+constants:  0.00419457131435 0.0338725095405 3.36379153711e-14 8.06539520154e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00039920660863 0.000400814
+mass conservations:  0.86523224522
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000397122647064 0.000400814
+mass conservations:  0.880994037454
+--------------
+constants:  0.00382186375553 0.0341862575652 3.370248942e-14 8.99934779494e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000393758516803 0.000400814
+mass conservations:  0.880669666122
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000397684317588 0.000400814
+mass conservations:  0.905632746806
+--------------
+constants:  0.00399988592201 0.0352819958004 3.30976524263e-14 8.12806481977e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401471144501 0.000400814
+mass conservations:  0.876355921726
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402439584013 0.000400814
+mass conservations:  0.902202263694
+--------------
+constants:  0.00413292025371 0.0338518142043 3.32549164785e-14 8.65366688402e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000394252566981 0.000400814
+mass conservations:  0.872121813892
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000395098515739 0.000400814
+mass conservations:  0.891014758501
+--------------
+constants:  0.00390728661693 0.035274295121 3.32599487445e-14 8.2870919621e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040057934306 0.000400814
+mass conservations:  0.878735060874
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402575582368 0.000400814
+mass conservations:  0.905892399184
+--------------
+constants:  0.00362678199531 0.0364286528806 3.26896439607e-14 8.86402038422e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000398079092637 0.000400814
+mass conservations:  0.892590279483
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000405785267457 0.000400814
+mass conservations:  0.927561717073
+--------------
+constants:  0.00405262398459 0.0345115453755 3.34008475185e-14 8.26505149721e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399038086628 0.000400814
+mass conservations:  0.872876907269
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399314065429 0.000400814
+mass conservations:  0.89474353728
+--------------
+constants:  0.00409038042504 0.0344566638179 3.38315927762e-14 7.84000507083e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402879116546 0.000400814
+mass conservations:  0.867407269126
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400814376195 0.000400814
+mass conservations:  0.886809532275
+--------------
+constants:  0.00412774431184 0.0351163969973 3.32950967833e-14 7.63105646099e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000405366857684 0.000400814
+mass conservations:  0.868852432324
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040321656946 0.000400814
+mass conservations:  0.890797420082
+--------------
+constants:  0.00395494419979 0.0347634890444 3.34487171579e-14 8.37955177572e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000398930181094 0.000400814
+mass conservations:  0.876418367944
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400421541599 0.000400814
+mass conservations:  0.90094415829
+--------------
+constants:  0.00392362459729 0.0353766765163 3.3418108034e-14 8.052305317e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.0004028630145 0.000400814
+mass conservations:  0.876543305578
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000403736779401 0.000400814
+mass conservations:  0.903312750517
+--------------
+constants:  0.00402037413777 0.0347278281607 3.34051626473e-14 8.21186495216e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399996426328 0.000400814
+mass conservations:  0.873866681907
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400433047852 0.000400814
+mass conservations:  0.897004834132
+--------------
+constants:  0.00398660676775 0.0343291422716 3.38750582367e-14 8.23119206063e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399671167187 0.000400814
+mass conservations:  0.871852762939
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399608995205 0.000400814
+mass conservations:  0.893259246246
+--------------
+constants:  0.00399656613345 0.0350437824182 3.32920038789e-14 8.15384662998e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401029582604 0.000400814
+mass conservations:  0.875282792184
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401743207183 0.000400814
+mass conservations:  0.900067708319
+--------------
+constants:  0.0040523594568 0.0349877957145 3.34456368655e-14 7.86685253182e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000403396070971 0.000400814
+mass conservations:  0.871318810818
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402413005578 0.000400814
+mass conservations:  0.894243315363
+--------------
+constants:  0.00397929801404 0.0348195657119 3.34479470848e-14 8.25137696474e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400012283651 0.000400814
+mass conservations:  0.875159930335
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400890409555 0.000400814
+mass conservations:  0.899306912109
+--------------
+constants:  0.00386138202605 0.0354760718881 3.28709384016e-14 8.61208518366e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000398037485036 0.000400814
+mass conservations:  0.883733629765
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000402186539689 0.000400814
+mass conservations:  0.913011305232
+--------------
+constants:  0.00403313082529 0.0347115158354 3.35914291825e-14 8.03302509904e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401630845874 0.000400814
+mass conservations:  0.871651341104
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040109104657 0.000400814
+mass conservations:  0.893900971219
+--------------
+constants:  0.00410739793835 0.0343770509421 3.36083226523e-14 8.03796486086e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400707699453 0.000400814
+mass conservations:  0.869001452589
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399483679541 0.000400814
+mass conservations:  0.888613760084
+--------------
+constants:  0.00405737010799 0.0346013619868 3.35212291754e-14 8.10024663617e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400691321726 0.000400814
+mass conservations:  0.871534924713
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400261765599 0.000400814
+mass conservations:  0.89319382005
+--------------
+constants:  0.00401280840262 0.0348602848155 3.35211420135e-14 8.05738271281e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401693336896 0.000400814
+mass conservations:  0.872973353026
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401561644635 0.000400814
+mass conservations:  0.896308289235
+--------------
+constants:  0.00401848270398 0.0347609423244 3.34341574889e-14 8.17324439232e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400417051737 0.000400814
+mass conservations:  0.873645910863
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400713050969 0.000400814
+mass conservations:  0.89683373139
+--------------
+constants:  0.00404757469221 0.0344029105111 3.37053775869e-14 8.12509991615e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400322204598 0.000400814
+mass conservations:  0.870637939793
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399710546657 0.000400814
+mass conservations:  0.891392929038
+--------------
+constants:  0.00400931827314 0.0348835644414 3.33953473059e-14 8.14665995153e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400859474855 0.000400814
+mass conservations:  0.874155183351
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040124122597 0.000400814
+mass conservations:  0.897974924895
+--------------
+constants:  0.00399910372428 0.0348212013969 3.33079113449e-14 8.30273887334e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000399382918915 0.000400814
+mass conservations:  0.875596440604
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400484098866 0.000400814
+mass conservations:  0.899734523254
+--------------
+constants:  0.00402462405004 0.0347389372258 3.35205497231e-14 8.10045354261e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401059859272 0.000400814
+mass conservations:  0.87264374631
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400930229801 0.000400814
+mass conservations:  0.895383182483
+--------------
+constants:  0.00407559955353 0.0346728372773 3.34876947618e-14 8.00892529657e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401515911355 0.000400814
+mass conservations:  0.870816741614
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400702275614 0.000400814
+mass conservations:  0.892328621108
+--------------
+constants:  0.00405152416866 0.034709519386 3.34777578426e-14 8.06953821362e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040113505587 0.000400814
+mass conservations:  0.871911983131
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400742114386 0.000400814
+mass conservations:  0.894105977738
+--------------
+constants:  0.00399460448992 0.034945119702 3.33926770049e-14 8.14470141387e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401036913256 0.000400814
+mass conservations:  0.87461551302
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401545139938 0.000400814
+mass conservations:  0.898892249267
+--------------
+constants:  0.00404167870347 0.0346873014156 3.34890911327e-14 8.11136033059e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400780226128 0.000400814
+mass conservations:  0.872317981129
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400584448343 0.000400814
+mass conservations:  0.894648890117
+--------------
+constants:  0.00404508989367 0.03474871891 3.35072155133e-14 8.04076162685e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401506754013 0.000400814
+mass conservations:  0.871872413685
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.00040104161326 0.000400814
+mass conservations:  0.894230084488
+--------------
+constants:  0.0040251345014 0.0347578864708 3.3452421995e-14 8.14012370095e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400687299738 0.000400814
+mass conservations:  0.873203834697
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400793033693 0.000400814
+mass conservations:  0.896187441747
+--------------
+constants:  0.00406216243865 0.0345632578077 3.35745630408e-14 8.06407794236e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400966620609 0.000400814
+mass conservations:  0.870855371101
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400281249918 0.000400814
+mass conservations:  0.892114127191
+--------------
+constants:  0.00402252931452 0.034803487783 3.34401512396e-14 8.12601444923e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400887981924 0.000400814
+mass conservations:  0.873341372556
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000401001866088 0.000400814
+mass conservations:  0.896539030005
+--------------
+constants:  0.00400545911606 0.0347842870616 3.34733492027e-14 8.16943779808e+13
+initial d and v:  0 0.0003607326 2.45784673729e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400574553643 0.000400814
+mass conservations:  0.873838159873
+initial d and v:  1 0.0004408954 4.48750892638e-11
+Converged in  10  iterations
+calculated, experimental d:  0.000400915860526 0.000400814
+mass conservations:  0.897260421703
+Warning: Maximum number of iterations has been exceeded.
+(array([  4.02513450e-03,   3.47578865e-02,   3.34524220e-14,
+         8.14012370e+13]), 0.00036841669369826256, 50, 92, 2)

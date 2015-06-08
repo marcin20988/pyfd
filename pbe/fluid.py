@@ -71,12 +71,13 @@ class fluid:
             self.theta = None
             self.Re = 78200.0
             self.timeRange = arange(0.0, 300.0, 1e-01)
-            self.d0 = 0.5e-03
             self.expectedD = 0.32e-03
+            #self.d0 = np.array([0.9 * self.expectedD, 1.1 * self.expectedD])
+            self.d0 = np.array([0.8 * self.expectedD, 1.2 * self.expectedD])
             self.v0 = pi / 6.0 * self.d0 ** 3
-            self.s0 = self.v0 / 3.0
-            self.vMax = self.v0 * 8.0
-            self.numberOfClasses = 120
+            self.s0 = self.v0 / 4.0
+            self.vMax = self.v0 * 4.0
+            self.numberOfClasses = 50
             self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
             self.St = 2.0 / 9.0 * (self.expectedD / self.D) ** 2 \
                 * self.Re * self.R
@@ -106,13 +107,13 @@ class fluid:
             # residence time is 10 minutes
             self.theta = 10.0 * 60.0
             self.Re = self.Nstar * self.Dstar ** 2 / self.muc * self.rhoc
-            self.timeRange = arange(0.0, 60.0, 1e-01)
-            self.d0 = 0.45e-03
+            self.timeRange = arange(0.0, 1.0, 1e-02)
+            self.d0 = np.array([0.9 * self.expectedD, 1.1 * self.expectedD])
             #self.expectedD = 0.255e-03
             self.v0 = pi / 6.0 * self.d0 ** 3
             self.s0 = self.v0 / 3.0
-            self.vMax = self.v0 * 8.0
-            self.numberOfClasses = 120
+            self.vMax = self.v0 * 12.0
+            self.numberOfClasses = 70
             self.R = 2.0 * self.rhoc / (2.0 * self.rhod + self.rhoc)
             self.St = 2.0 / 9.0 * (self.expectedD / self.Dstar) ** 2 \
                 * self.Re * self.R
