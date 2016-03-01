@@ -17,7 +17,7 @@ def error_function(C, experiment):
     mp[3] *= 1e13
     pbe_solutions = [
         CTSolution(
-            M=20, v0=v0, Nstar=experiment.Nstar, phi=experiment.phi,
+            M=40, v0=v0, Nstar=experiment.Nstar, phi=experiment.phi,
             model_parameters=mp)
         for v0 in v0s]
     error = sum(
@@ -45,8 +45,8 @@ for e in experiments[0:1]:
 
     Copt = minimize(
         lambda c: error_function(c, e), c0,
-        method='TNC', bounds=[(0, None)] * 4,
-        options={'disp': False, 'ftol': 0.01, 'maxiter': 1})
+        method='L-BFGS-B', bounds=[(0, None)] * 4,
+        options={'disp': False, 'ftol': 0.01, 'maxiter': 50})
     res['best_fit'] = Copt.x
     res['setup'] = {'phi': e.phi, 'Nstar': e.Nstar, 'd32': e.d32}
     results.append(res)
