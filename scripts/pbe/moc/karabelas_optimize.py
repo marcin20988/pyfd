@@ -1,6 +1,6 @@
 from numpy import genfromtxt, abs, array, pi
-from scipy.optimize import minimize
-from pyfd.pbe.moc import KarabalasSolution, KarabalasSolutionHighViscosity
+from scipy.optimize import minimize, differential_evolution
+from pyfd.pbe.moc import KarabelasSolution, KarabelasSolutionHighViscosity
 import time
 import pickle
 
@@ -14,10 +14,11 @@ class angeli_experiment:
 def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
-    mp[3] *= 1e11
+    mp[:]=mp[:]/1000
+    mp[3] *= 1e13
     pbe_solutions = [
-        AngeliSolution(
-            M=20, v0=v0, U=experiment.U, phi=experiment.phi, theta=experiment.theta,
+        KarabelasSolution(
+            M=20, v0=v0, U=experiment.U, theta=experiment.theta,
             model_parameters=mp)
         for v0 in v0s]
     error = sum(
@@ -30,7 +31,7 @@ def error_function(C, experiment):
 experiments = []
 Us = [2.98, 2.57, 2.22, 1.84]
 ds = [407.0, 455.0, 794.0, 1066.0]
-for i in range(5):
+for i in range(4):
     experiments.append(angeli_experiment(Us[i], ds[i] * 1e-06))
 
 # original C&T parameters where multiplying (Nstar**3 * D**2)
@@ -40,16 +41,22 @@ s=0.407
 c0 = [0.4 * s**(-1./3.), 0.08 / s**(-2./3.), 2.8 * s**(-1./3.), 1.83 * s]  # CT original constants
 
 results = []
-for e in experiments[0:1]:
+for e in experiments:
     res = dict()
 
-    Copt = minimize(
-        lambda c: error_function(c, e), c0,
-        method='L-BFGS-B', bounds=[(0, None)] * 4,
-        options={'disp': False, 'ftol': 0.01, 'maxiter': 100})
+    #Copt = minimize(
+        #lambda c: error_function(c, e), c0,
+        #method='TNC', bounds=[(0, None)] * 4,
+        #options={'disp': False, 'ftol': 0.001, 'maxiter': 100})
+    Copt = differential_evolution(
+        lambda c: error_function(c, e), 
+        bounds=[(0, 1e06)] * 4,
+        maxiter=1000,
+        polish=True
+        )
     res['best_fit'] = Copt.x
-    res['setup'] = {'U': e.U, 'phi': e.phi, 'd32': e.d32, 'theta': e.theta}
+    res['setup'] = {'U': e.U, 'd32': e.d32, 'theta': e.theta}
     results.append(res)
 
-with open('data/angeli_optimization_results.pickle', 'wb') as f:
+with open('data/karabelas_optimization_results.pickle', 'wb') as f:
     pickle.dump(results, f)

@@ -15,7 +15,8 @@ class sa_experiment:
 def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
-    mp[3] *= 1e13
+    mp[:]=mp[:]/1000
+    mp[3] *= 1e12
     pbe_solutions = [
         SASolution(
             M=20, v0=v0, U=experiment.U, phi=experiment.phi, theta=experiment.theta,
@@ -45,7 +46,7 @@ for e in experiments:
     Copt = minimize(
         lambda c: error_function(c, e), c0,
         method='L-BFGS-B', bounds=[(0, None)] * 4,
-        options={'disp': False, 'ftol': 0.01, 'maxiter': 100})
+        options={'disp': False, 'ftol': 0.01, 'maxiter': 50})
 
     #b = [(0, 1), (0, 1), (0, 10), (0, 10)] 
     #Copt = differential_evolution(lambda c: error_function(c, e), 
