@@ -11,6 +11,7 @@ class CTSolution(CaseSolution):
             v0=4e-11,  # [cm^3]
             model_parameters=None):
         self.D = 0.10  # [m] impeller diameter
+        self.Nstar = Nstar
 
         contProperties = dict()
         dispProperties = dict()
