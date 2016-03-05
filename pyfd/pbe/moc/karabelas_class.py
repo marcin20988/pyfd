@@ -75,6 +75,7 @@ class KarabelasSolutionHighViscosity(CaseSolution):
 
         # calculate turbulent properties
         Re = U * self.D / contProperties['mu'] * contProperties['rho']
+        self.Re = Re
         I = 0.16 * Re ** (-1. / 8.)
         u_rms = U * I
         k = 3. / 2. * u_rms ** 2

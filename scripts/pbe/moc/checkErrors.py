@@ -1,13 +1,14 @@
 import pickle
-from pyfd.pbe.moc import CTSolution, AngeliSolution, KarabelasSolution
+from pyfd.pbe.moc import CTSolution, AngeliSolution, KarabelasSolution, KarabelasSolutionHighViscosity
 from numpy import exp, array, pi
 import matplotlib.pyplot as plt
 
-sets = ['angeli', 'ct', 'karabelas']
+sets = ['angeli', 'ct', 'karabelas', 'karabelas_high']
 #sets = ['karabelas']
 multipliers = {'ct': [0.1, 0.1, 1., 1e12],
         'angeli': [1., 1., 1., 1e10],
-        'karabelas' :[0.1, 0.1, 1., 1e12]}
+        'karabelas': [0.1, 0.1, 1., 1e12],
+        'karabelas_high': [0.1, 0.001, 1., 1e12]}
 
 results = dict()
 
@@ -19,6 +20,9 @@ with open('data/angeli_optimization_results.pickle', 'rb') as f:
 
 with open('data/karabelas_optimization_results.pickle', 'rb') as f:
     results['karabelas'] = pickle.load(f)
+
+with open('data/karabelas_high_optimization_results.pickle', 'rb') as f:
+    results['karabelas_high'] = pickle.load(f)
 
 res = {'c1': [], 'c2': [], 'c3': [], 'c4': [], 'Re': [], 'St': [], 'Ca': [], 'We': []}
 for key in sets:
@@ -58,6 +62,13 @@ for key in sets:
         elif key =='karabelas':
             pbe_solutions = \
             KarabelasSolution(
+                M=40, v0=v0, U=s['U'], theta=s['theta'],
+                model_parameters=c)
+            Re = pbe_solutions.Re
+
+        elif key =='karabelas_high':
+            pbe_solutions = \
+            KarabelasSolutionHighViscosity(
                 M=40, v0=v0, U=s['U'], theta=s['theta'],
                 model_parameters=c)
             Re = pbe_solutions.Re
