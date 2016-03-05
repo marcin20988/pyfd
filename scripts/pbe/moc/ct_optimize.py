@@ -1,4 +1,4 @@
-from numpy import genfromtxt, abs, array, pi
+from numpy import genfromtxt, abs, array, pi, log, exp
 from scipy.optimize import minimize, differential_evolution
 from pyfd.pbe.moc import CTSolution
 import time
@@ -14,8 +14,10 @@ class ct_experiment:
 def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
-    mp[:]=mp[:]/1000
+    mp[:]=exp(mp[:])
     mp[3] *= 1e12
+    mp[1] *= 0.1
+    mp[0] *= 0.1
     pbe_solutions = [
         CTSolution(
             M=40, v0=v0, Nstar=experiment.Nstar, phi=experiment.phi,
@@ -40,21 +42,23 @@ for c in concentrations:
 
 
 c0 = [0.4, 0.08, 2.8, 1.83]  # CT original constants
+c0 = [0.1, 0.1, 1., 1.]  # CT original constants
 results = []
 for e in experiments:
     res = dict()
 
-    #Copt = minimize(
-        #lambda c: error_function(c, e), c0,
-        #method='L-BFGS-B', bounds=[(0, None)] * 4,
-        #options={'disp': False, 'ftol': 0.01, 'maxiter': 50})
+    Copt = minimize(
+        lambda c: error_function(c, e), c0,
+        method='L-BFGS-B', 
+        options={'disp': False, 'ftol': 1e-01, 'maxiter': 50})
 
-    Copt = differential_evolution(
-        lambda c: error_function(c, e), 
-        bounds=[(0, 1e06)] * 4,
-        maxiter=100,
-        polish=True
-        )
+    #Copt = differential_evolution(
+        #lambda c: error_function(c, e), 
+        #bounds=[(-1e02, 1e02)] * 4,
+        #maxiter=100,
+        #polish=True,
+        #strategy='best1exp'
+        #)
 
     res['best_fit'] = Copt.x
     res['setup'] = {'phi': e.phi, 'Nstar': e.Nstar, 'd32': e.d32}
