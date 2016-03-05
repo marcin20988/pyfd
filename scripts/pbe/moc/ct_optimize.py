@@ -44,7 +44,7 @@ for c in concentrations:
 c0 = [0.4, 0.08, 2.8, 1.83]  # CT original constants
 c0 = [0.1, 0.1, 1., 1.]  # CT original constants
 results = []
-for e in experiments:
+for e in experiments[0:1]:
     res = dict()
 
     Copt = minimize(
