@@ -1,4 +1,4 @@
-from numpy import genfromtxt, abs, array, pi
+from numpy import genfromtxt, abs, array, pi, exp
 from scipy.optimize import minimize, differential_evolution
 from pyfd.pbe.moc import SASolution
 import time
@@ -15,8 +15,10 @@ class sa_experiment:
 def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
-    mp[:]=mp[:]/1000
+    mp[:]=exp(mp[:])
     mp[3] *= 1e12
+    mp[1] *= 0.1
+    mp[0] *= 0.1
     pbe_solutions = [
         SASolution(
             M=20, v0=v0, U=experiment.U, phi=experiment.phi, theta=experiment.theta,
@@ -39,13 +41,14 @@ experiments.append(sa_experiment())
 s=0.407
 c0 = [0.4 * s**(-1./3.), 0.08 / s**(-2./3.), 2.8 * s**(-1./3.), 1.83 * s]  # CT original constants
 #c0 = [0.75, 0.22, 5., 4.3]
+c0 = [1., 1., 1., 1.]  # CT original constants
 results = []
 for e in experiments:
     res = dict()
 
     Copt = minimize(
         lambda c: error_function(c, e), c0,
-        method='L-BFGS-B', bounds=[(0, None)] * 4,
+        method='L-BFGS-B',
         options={'disp': False, 'ftol': 0.01, 'maxiter': 50})
 
     #b = [(0, 1), (0, 1), (0, 10), (0, 10)] 

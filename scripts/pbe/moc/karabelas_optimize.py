@@ -1,4 +1,5 @@
 from numpy import genfromtxt, abs, array, pi, exp
+import numpy as np
 from scipy.optimize import minimize, differential_evolution
 from pyfd.pbe.moc import KarabelasSolution, KarabelasSolutionHighViscosity
 import time
@@ -15,10 +16,12 @@ def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
 
     mp = array(C)
-    mp[:]=exp(mp[:])
+    mp[:]=exp(0.1 * mp[:])
     mp[3] *= 1e12
+    #mp = np.append(mp, 7.2e12)
+    mp[2] *= 1e-02
     mp[1] *= 0.1
-    mp[0] *= 0.1
+    mp[0] *= 1.
 
     pbe_solutions = [
         KarabelasSolution(
@@ -52,7 +55,7 @@ for e in experiments:
     Copt = minimize(
         lambda c: error_function(c, e), c0,
         method='L-BFGS-B',
-        options={'disp': False, 'ftol': 0.001, 'maxiter': 50})
+        options={'disp': False, 'ftol': 0.001, 'maxiter': 30})
     #Copt = differential_evolution(
         #lambda c: error_function(c, e), 
         #bounds=[(0, 1e06)] * 4,

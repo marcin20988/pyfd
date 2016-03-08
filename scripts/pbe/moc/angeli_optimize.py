@@ -15,10 +15,12 @@ class angeli_experiment:
 def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
-    mp[:]=exp(mp[:])
-    mp[3] *= 1e10
-    mp[1] *= 1.
-    mp[0] *= 1.
+    mp[:]=exp(0.5 * mp[:])
+
+    mp[0] *= 0.01
+    mp[1] *= 0.01
+    mp[2] *= 1000.
+    mp[3] *= 1e12
     pbe_solutions = [
         AngeliSolution(
             M=20, v0=v0, U=experiment.U, phi=experiment.phi, theta=experiment.theta,
@@ -46,7 +48,7 @@ for i in range(5):
 # so
 s=0.407
 c0 = [0.4 * s**(-1./3.), 0.08 / s**(-2./3.), 2.8 * s**(-1./3.), 1.83 * s]  # CT original constants
-c0 = [0.1, 0.1, 1., 1.]  # CT original constants
+c0 = [1., 1., 1., 1.]  # CT original constants
 
 results = []
 for e in experiments:
@@ -55,7 +57,7 @@ for e in experiments:
     Copt = minimize(
         lambda c: error_function(c, e), c0,
         method='L-BFGS-B',
-        options={'disp': False, 'ftol': 0.01, 'maxiter': 50})
+        options={'disp': False, 'ftol': 0.01, 'maxiter': 30})
 
     #Copt = differential_evolution(
         #lambda c: error_function(c, e), 

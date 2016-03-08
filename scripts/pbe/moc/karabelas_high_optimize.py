@@ -6,7 +6,7 @@ import pickle
 
 
 class angeli_experiment:
-    def __init__(self, U, d32, theta=1200.):
+    def __init__(self, U, d32, theta=3600.):
         self.theta = theta
         self.U = U
         self.d32 = d32
@@ -15,14 +15,15 @@ def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
 
     mp = array(C)
-    mp[:]=exp(mp[:])
+    mp[:]=exp(0.1 * mp[:])
+    mp[0] *= 1.
+    mp[1] *= 0.1
+    mp[2] *= 1e-02
     mp[3] *= 1e12
-    mp[1] *= 0.001
-    mp[0] *= 0.1
 
     pbe_solutions = [
         KarabelasSolutionHighViscosity(
-            M=20, v0=v0, U=experiment.U, theta=experiment.theta,
+            M=30, v0=v0, U=experiment.U, theta=experiment.theta,
             model_parameters=mp)
         for v0 in v0s]
     error = sum(
@@ -46,7 +47,7 @@ c0 = [0.4 * s**(-1./3.), 0.08 / s**(-2./3.), 2.8 * s**(-1./3.), 1.83 * s]  # CT 
 
 c0 = [1., 1., 1., 1.]  # CT original constants
 results = []
-for e in experiments:
+for e in experiments[2:3]:
     res = dict()
 
     Copt = minimize(
