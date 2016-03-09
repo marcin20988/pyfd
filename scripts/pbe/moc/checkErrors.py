@@ -3,10 +3,10 @@ from pyfd.pbe.moc import CTSolution, AngeliSolution, KarabelasSolution, Karabela
 from numpy import exp, array, pi, sqrt
 
 sets = ['sa', 'angeli', 'ct', 'karabelas']
-#sets = ['karabelas']
+#sets = ['angeli']
 multipliers = {'ct': [0.1, 0.1, 1., 1e12],
-        'angeli': [0.1, 0.1, 100., 1e12],
-        'karabelas': [0.1, 0.1, 1., 1e12],
+        'angeli': [0.01, 0.01, 1000., 1e12],
+        'karabelas': [1., 0.1, 0.01, 1e12],
         'karabelas_high': [0.1, 0.1, 100., 1e12],
         'sa': [0.1, 0.1, 1., 1e12]}
 

@@ -1,5 +1,5 @@
 import pickle
-from numpy import exp, array, pi, sqrt, log, unique
+from numpy import exp, array, pi, sqrt, log, unique, mean, std
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 
@@ -14,23 +14,24 @@ def xAxis(nondimsArray, aRe, aSt, aWe, aCa, C1, C2):
     We = array(nondimsArray['We'])
     Ca = array(nondimsArray['Ca'])
 
-    return Re
+    #return Re
     # c1
-    #return Re / We ** aWe * St ** aSt / Ca ** aCa
+    #return Re / Ca
 
     # c4
-    #return Re ** aRe / We ** aWe / St ** aSt / Ca ** aCa
+    #return Re ** aRe / We ** aWe / Ca ** aCa 
 
     # c3
-    #return St ** aSt * We ** aWe
+    #return We ** aWe / Re ** aRe
 
-    # c2 -> const?
+    # c2
+    #return We * Re ** aRe / Ca ** aCa * St ** aSt
 
 def dependency(nondimsArray, A, B, aRe, aSt, aWe, aCa, C1, C2):
     x = xAxis(nondimsArray, aRe, aSt, aWe, aCa, C1, C2)
     return A * x + B
 
-target = 'c4'
+target = 'c1'
 Ci = array(data[target])
 #Ci = array(data['c4']) / 1e12
 popt, pcov = curve_fit(dependency, data, Ci)
@@ -65,3 +66,13 @@ for key, value in splitData.iteritems():
 
 plt.legend(loc='best')
 plt.show()
+
+means = dict()
+stds = dict()
+
+for i in range(4):
+    key = 'c' + repr(i+1)
+    means[key] = mean(data[key])
+    stds[key] = std(data[key])
+
+print means[target], stds[target]
