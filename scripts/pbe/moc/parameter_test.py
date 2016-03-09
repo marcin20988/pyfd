@@ -16,9 +16,10 @@ def error_function(C, experiment):
     v0s = array([0.5, 1.5]) * pi / 6 * experiment.d32**3
     mp = array(C)
     mp[:]=exp(mp[:])
-    mp[3] *= 1e12
-    mp[1] *= 0.1
-    mp[0] *= 0.1
+    mp[3] *= 1e10
+    mp[1] *= 10.
+    mp[2] *= 10.
+    mp[0] *= 0.01
     pbe_solutions = [
         SASolution(
             M=20, v0=v0, U=experiment.U, phi=experiment.phi, theta=experiment.theta,
