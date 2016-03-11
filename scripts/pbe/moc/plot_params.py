@@ -1,6 +1,6 @@
-from pyfd.aux import set_plt_params, plt
+#from pyfd.aux import set_plt_params, plt
 import numpy as np
-#from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
 c = []
@@ -53,7 +53,7 @@ ax.set_xlabel('breakup parameters')
 ax.set_ylabel('coalescence parameters')
 ax.set_zlabel('error')
 
-ax.bar3d(X, Y, np.zeros_like(X), 0.5, 0.75, Z, alpha=0.75,
+ax.bar3d(X, Y, np.zeros_like(X), 0.5, 0.75, Z, alpha=0.35,
     color=colorArray, edgecolor="none", zorder=10)
 
 #ax.scatter(X, Y, Z, color=colorArray)
@@ -71,7 +71,7 @@ for tempX in [X, Y]:
     for yi in tempX:
         it = int((yi - ymin) / (ymax - ymin) * N)
         it = min(it, N - 1)
-        newY[it] += 1.0 / len(Y) / 5
+        newY[it] += 1.0 / len(Y) / 2.5
     #fig = plt.figure()
 
     if ct == 1:
